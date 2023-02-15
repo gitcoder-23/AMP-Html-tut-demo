@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Hello, AMPs</title>
+    <link
+      rel="canonical"
+      href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/"
+    />
+    <script
+      async
+      custom-element="amp-carousel"
+      src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-sidebar"
+      src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-bind"
+      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    ></script>
+
+    <!-- you-tut->>> https://youtu.be/Oh5pclXIIto -->
+
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+
+    <style amp-custom>
+      .container {
+        background-color: #f1f1f1;
+        padding-top: 20px;
+        height: 200px;
+      }
+      h1.top-class {
+        color: red;
+        text-align: center;
+      }
+      .row.main-row {
+        width: 100%;
+      }
+      .left-box,
+      .right-box {
+        width: 50%;
+        float: left;
+      }
+      .cta_main {
+        margin-top: 10px;
+      }
+      .cta_click {
+        color: #fff;
+        background-color: green;
+        padding: 12px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        margin-top: 10px;
+      }
+      .image-carousal {
+        background-color: #000;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <amp-sidebar
+        id="sidebar"
+        class="sample-sidebar"
+        layout="nodisplay"
+        side="left"
+      >
+        <h3>Sidebar</h3>
+        <button on="tap:sidebar.close">Close sidebar</button>
+        <button on="tap:sidebar.toggle">Toggle sidebar</button>
+      </amp-sidebar>
+      <button on="tap:sidebar.toggle">Toggle sidebar</button>
+      <button on="tap:sidebar.open">Open sidebar</button>
+      <!-- Sidebar end -->
+
+      <amp-img
+        height="200"
+        width="300"
+        style="margin-top: 25px"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrOWV_x73miubvp3ueV727IX-7rO2_iptX2ApjzDna&s"
+        layout="responsive"
+      ></amp-img>
+      <h1 class="top-class">Welcome to Accelerated mobile page</h1>
+      <div class="row main-row">
+        <div class="left-box">
+          <h1 class="left-content">Left Box</h1>
+        </div>
+        <div class="right-box">
+          <h1 class="right-content">Right Box</h1>
+        </div>
+
+        <div class="image-inner">
+          <amp-img
+            height="200"
+            width="300"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrOWV_x73miubvp3ueV727IX-7rO2_iptX2ApjzDna&s"
+          ></amp-img>
+        </div>
+        <div class="cta_main">
+          <!-- cta-> "Call to action" -->
+          <a href="https://amp.dev/" class="cta_click" target="_blank"
+            >Click Here</a
+          >
+        </div>
+
+        <!-- Carousal amp pages -->
+        <!-- https://amp.dev/documentation/examples/components/amp-carousel/ -->
+        <div class="image-carousal">
+          <amp-carousel
+            width="400"
+            height="300"
+            layout="responsive"
+            type="slides"
+            autoplay
+            delay="2000"
+            role="region"
+          >
+            <amp-img
+              src="https://www.giftalove.com/blog/wp-content/uploads/Zinnia.jpg"
+              width="400"
+              height="300"
+              layout="responsive"
+              alt="a sample image"
+            ></amp-img>
+            <amp-img
+              src="https://www.thespruce.com/thmb/6KsyQ85ioELI6CE3WsKcx85LGvs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/white-flowers-for-your-garden-4122501-01-54dac903a41b4244951ac801f7f0d5b9.JPG"
+              width="400"
+              height="300"
+              layout="responsive"
+              alt="another sample image"
+            ></amp-img>
+            <amp-img
+              src="https://hgtvhome.sndimg.com/content/dam/images/grdn/fullset/2013/5/21/0/Original_york-minster-rose.jpg.rend.hgtvcom.966.966.suffix/1452655040107.jpeg"
+              width="400"
+              height="300"
+              layout="responsive"
+              alt="and another sample image"
+            ></amp-img>
+          </amp-carousel>
+        </div>
+      </div>
+      <!-- Hide and show in amp -->
+      <div style="margin-top: 20px; margin-bottom: 20px">
+        <amp-img
+          src="https://unsplash.it/400/200"
+          width="200"
+          [width]="myImageDimension.width"
+          height="100"
+          [height]="myImageDimension.height"
+        >
+        </amp-img>
+        <button
+          on="tap:AMP.setState({
+                          myImageDimension: {
+                            width: 400,
+                            height: 200
+                          }
+                        })"
+        >
+          Change size
+        </button>
+      </div>
+
+      <amp-state id="count"
+        ><script type="application/json">
+          1
+        </script></amp-state
+      >
+      <div>Item <span [text]="count">1</span></div>
+      <button on="tap:AMP.pushState({ count: count + 1 })">
+        Increase count
+      </button>
+      <button on="tap:AMP.pushState({ count: count - 1 })">
+        Decrease count
+      </button>
+    </div>
+  </body>
+</html>
